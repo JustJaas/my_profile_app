@@ -1,20 +1,28 @@
 import 'package:flutter/material.dart';
-import 'screens/home_screen.dart';
+import 'package:my_profile/presentation/screens/home_screen.dart';
+import 'package:my_profile/presentation/theme/app_theme.dart';
+import 'package:my_profile/presentation/theme/theme_controller.dart';
 
 void main() {
-  runApp(const MiPerfilDevApp());
+  runApp(MiPerfilDevApp(themeController: ThemeController()));
 }
 
 class MiPerfilDevApp extends StatelessWidget {
-  const MiPerfilDevApp({super.key});
+  final ThemeController themeController;
+  const MiPerfilDevApp({super.key, required this.themeController});
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Mi Perfil Dev',
-      debugShowCheckedModeBanner: false,
-      theme: ThemeData(colorSchemeSeed: Colors.indigo, useMaterial3: true),
-      home: const HomeScreen(),
+    return ListenableBuilder(
+      listenable: themeController,
+      builder: (BuildContext context, _) {
+        return MaterialApp(
+          title: 'Mi Perfil Dev',
+          debugShowCheckedModeBanner: false,
+          theme: AppTheme.build(themeController.accent),
+          home: HomeScreen(themeController: themeController),
+        );
+      },
     );
   }
 }
