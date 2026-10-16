@@ -3,9 +3,9 @@ import 'package:my_profile/domain/skill.dart';
 import 'package:my_profile/presentation/widgets/skill_item_list.dart';
 
 class SkillsScreen extends StatelessWidget {
-  final List<Skill> skills;
-
   const SkillsScreen({super.key, required this.skills});
+
+  final List<Skill> skills;
 
   @override
   Widget build(BuildContext context) {

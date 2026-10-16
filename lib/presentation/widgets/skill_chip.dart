@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:my_profile/domain/skill.dart';
 
 class SkillChip extends StatelessWidget {
-  final Skill skill;
-  final VoidCallback onToggleFavorite;
-
   const SkillChip({
     super.key,
     required this.skill,
     required this.onToggleFavorite,
   });
+
+  final Skill skill;
+  final VoidCallback onToggleFavorite;
 
   @override
   Widget build(BuildContext context) {

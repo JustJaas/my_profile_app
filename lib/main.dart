@@ -8,8 +8,9 @@ void main() {
 }
 
 class MiPerfilDevApp extends StatelessWidget {
-  final ThemeController themeController;
   const MiPerfilDevApp({super.key, required this.themeController});
+
+  final ThemeController themeController;
 
   @override
   Widget build(BuildContext context) {

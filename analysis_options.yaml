@@ -12,3 +12,4 @@ linter:
     always_declare_return_types: true
     prefer_final_locals: true
     avoid_dynamic_calls: true
+    sort_constructors_first: true

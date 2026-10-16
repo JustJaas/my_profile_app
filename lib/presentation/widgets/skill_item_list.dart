@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:my_profile/domain/skill.dart';
 
 class SkillItemList extends StatelessWidget {
-  final Skill skill;
-
   const SkillItemList({super.key, required this.skill});
+
+  final Skill skill;
 
   @override
   Widget build(BuildContext context) {
